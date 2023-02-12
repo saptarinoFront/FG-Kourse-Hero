@@ -2,11 +2,11 @@
 
 ### Screenshot
 
-![](./dist/img/ss.png)
+![](./public/images/ss.png)
 
 ### Links
 
--   Live Site URL: [Live Demo](https://saptarinofront.github.io/ FG-Kourse-Hero/public/)
+-   Live Site URL: [Live Demo](https://saptarinofront.github.io/FG-Kourse-Hero/public/)
 
 ## Built with
 
