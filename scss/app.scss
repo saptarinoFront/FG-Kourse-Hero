@@ -1,0 +1,349 @@
+@use 'variables' as v;
+@use 'globals';
+
+/* Header & Navbar */
+.header {
+    padding: 3em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: v.$font-source;
+    &_link {
+        width: 25%;
+        font-weight: 600;
+        font-size: 2.2rem;
+        color: #ffffff;
+    }
+    &_nav {
+        width: 50%;
+        .nav_menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5em;
+            &_list {
+                padding: 1rem 0;
+                &_link {
+                    color: white;
+                    opacity: 0.8;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &_btn {
+        width: 25%;
+        display: flex;
+        justify-content: end;
+        a {
+            padding: 1rem 2.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffffff;
+            border-radius: 0.8rem;
+        }
+    }
+}
+
+/* Hero */
+.hero {
+    margin: 9em auto 14.8em;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    &_left {
+        width: 58.333333%;
+        &_text {
+            margin-bottom: 4.8rem;
+            color: #ffffff;
+            h1 {
+                font-weight: 400;
+                font-size: 5.4rem;
+            }
+            p {
+                width: 90%;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 3.2rem;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+        &_btn {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            button {
+                border: none;
+                background-color: v.$btn-color;
+                color: #ffffff;
+                padding: 1.2rem 1.7rem;
+                border-radius: 10rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            a {
+                text-decoration: underline;
+                color: v.$btn-color;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+    &_right {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 41.666667%;
+        position: relative;
+        &_card {
+            position: absolute;
+            left: 0;
+            width: 39em;
+            background-color: white;
+            border-radius: 1em;
+            z-index: 20;
+            box-shadow: 0 3em 6em rgba(0, 0, 0, 0.3);
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 1em 1em 0 0;
+            }
+            &_detail {
+                padding: 2.5em;
+                &_header {
+                    span {
+                        display: inline-block;
+                        margin-bottom: 0.5rem;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        border-radius: 10rem;
+                        padding: 0.2rem 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                    h2 {
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        color: v.$btn-color;
+                    }
+                }
+                hr {
+                    margin: 1.5em 0;
+                    border: solid 0.1em rgba(0, 0, 0, 0.1);
+                }
+                &_footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p:first-child {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        color: rgba(0, 0, 0, 0.6);
+                    }
+                    p:last-child {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+        &_card2 {
+            position: absolute;
+            left: 4.3em;
+            width: 39em;
+            background-color: white;
+            border-radius: 1em;
+            z-index: 10;
+            box-shadow: 0 3em 6em rgba(0, 0, 0, 0.3);
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 1em 1em 0 0;
+            }
+            &_detail {
+                padding: 2.5em;
+                &_header {
+                    span {
+                        display: inline-block;
+                        margin-bottom: 0.5rem;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        border-radius: 10rem;
+                        padding: 0.2rem 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                    h2 {
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        color: v.$btn-color;
+                    }
+                }
+                hr {
+                    margin: 1.5em 0;
+                    border: solid 0.1em rgba(0, 0, 0, 0.1);
+                }
+                &_footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p:first-child {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        color: rgba(0, 0, 0, 0.6);
+                    }
+                    p:last-child {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+        &_card3 {
+            position: absolute;
+            left: 8.3em;
+            width: 39em;
+            background-color: white;
+            border-radius: 1em;
+            box-shadow: 0 3em 6em rgba(0, 0, 0, 0.3);
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 1em 1em 0 0;
+            }
+            &_detail {
+                padding: 2.5em;
+                &_header {
+                    span {
+                        display: inline-block;
+                        margin-bottom: 0.5rem;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        border-radius: 10rem;
+                        padding: 0.2rem 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                    h2 {
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        color: v.$btn-color;
+                    }
+                }
+                hr {
+                    margin: 1.5em 0;
+                    border: solid 0.1em rgba(0, 0, 0, 0.1);
+                }
+                &_footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p:first-child {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        color: rgba(0, 0, 0, 0.6);
+                    }
+                    p:last-child {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* About */
+.about {
+    margin-bottom: 9.6em;
+    display: flex;
+    gap: 3em;
+    &_left {
+        width: 50%;
+        &_article {
+            display: flex;
+            align-items: start;
+            gap: 2.5em;
+            &_icon {
+                padding: 1.3em;
+                border-radius: 0.3em;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            &_text {
+                h2 {
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                    color: #ffffff;
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 3rem;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+    &_right {
+        width: 50%;
+        &_article {
+            display: flex;
+            align-items: start;
+            gap: 2.5em;
+            &_icon {
+                padding: 1.3em;
+                border-radius: 0.3em;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            &_text {
+                h2 {
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                    color: #ffffff;
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 3rem;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+}
